@@ -8,10 +8,12 @@ const userRoutes = require('./routes/userRoutes');
 const router = express.Router();
 
 const app = express();
-const port = process.env.PORT || 3000;
+
 
 app.use(express.json());
 dotenv.config();
+
+const port = process.env.PORT || 3000;
 
 mongoose.connect('mongodb+srv://davidperlera:root@todoapi.dwgyvci.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
